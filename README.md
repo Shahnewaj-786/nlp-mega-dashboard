@@ -42,3 +42,44 @@ Follow these commands to deploy the workspace on your local Mac environment:
 
    # Pull the localized open-source text embedding engine
    ollama pull nomic-embed-text
+### Step 2: Clone and Navigate to the Directory
+Create your project environment folder on your machine:
+``
+mkdir local_nlp_dashboard
+cd local_nlp_dashboard
+``
+### Step 3: Configure your Virtual Environment
+Construct and activate an isolated development container:
+
+``
+python3 -m venv venv
+source venv/bin/activate
+``
+### Step 4: Write Dependency Structure
+Create a requirements.txt file inside your root directory and paste the following structural package modules:
+
+``
+streamlit==1.32.0
+langchain==0.1.12
+langchain-community==0.0.28
+chromadb==0.4.24
+pypdf==4.1.0
+pdfplumber==0.11.0
+pydantic==2.6.4
+``
+
+Install the package requirements via pip:
+
+``
+pip install -r requirements.txt
+``
+
+### Step 5: Application Deployment Source Code
+Create a file named app.py in your working directory and add the fully integrated application source script.
+🚀 Execution Guide
+Run the Streamlit application runtime server locally:
+
+``
+streamlit run app.py
+``
+The build script will compile and automatically deploy a web-view interface in your default system browser at: http://localhost:8501
